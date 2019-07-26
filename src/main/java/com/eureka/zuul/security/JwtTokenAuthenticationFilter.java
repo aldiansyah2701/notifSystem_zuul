@@ -66,7 +66,7 @@ public class JwtTokenAuthenticationFilter extends  OncePerRequestFilter {
 					.getBody();
 			
 			String username = claims.getSubject();
-			System.out.println("USERNAME DI ZUUL = "+username);
+//			System.out.println("USERNAME DI ZUUL = "+username);
 			
 			if(username != null) {
 				@SuppressWarnings("unchecked")
@@ -82,7 +82,7 @@ public class JwtTokenAuthenticationFilter extends  OncePerRequestFilter {
 				 // Now, user is authenticated
 				 SecurityContextHolder.getContext().setAuthentication(auth);
 				 
-				 response.addHeader("Tokenku", token);
+//				 response.addHeader("Tokenku", token);
 			}
 			
 		} catch (Exception e) {
